@@ -4,16 +4,83 @@ import HeroSection from '../components/HeroSection.astro';
 // import Logo from '../components/Logo.astro';
 import Layout from '../layouts/Layout.astro';
 import ChargeHero from '../components/ChargeHero.astro';
+import Section from '../components/Section.astro';
+import ModelY from '../components/ModelY.astro';
+import ModelS from '../components/ModelS.astro';
 ---
 
 <Layout title="Autos Electricos | Tesla">
 	<LandingHeader/>
 	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto scroll-smooth">
 		<div class="snap-center">
-			<HeroSection/>
+			<Section 
+			title="Vive la experiencia de Tesla" 
+			subtitle="Agenda una demostracion de manejo hoy"
+			color="white">
+				<video slot="background" class="object-cover object-center h-full w-full" autoplay muted loop src="/public/video1.webm">
+				</video>
+				<div slot="footer">
+					<a class="border-[3px] border-white bg-white/5 backdrop-blur-sm rounded font-medium text-white px-8 py-2 inline-block hover:bg-white hover:text-black transition-colors" href="#">Prueba de conduccion</a>
+				</div>
+			</Section>
 		</div>
 		<div class="snap-center">
-			<ChargeHero/>
+			<ChargeHero
+			title="Model 3"
+			subtitle="Agenda una demostracion de manejo"
+			color="black"
+			>
+			<div 
+			slot="footer"
+			class="gap-x-4 flex mx-auto">
+                <a class="bg-gray-600 rounded font-medium text-white px-8 py-2 inline-block hover:bg-black hover:text-white transition-colors" href="#">Explorar el inventario</a>
+                <a class=" bg-white rounded font-medium  text-black px-8 py-2 hover:bg-black hover:text-white flex justify-center items-center transition-colors" href="#">Orden personalizada</a>
+            </div>
+			<div 
+			slot="background"
+			class="absolute top-0 bottom-0 h-full w-full z-10">
+				<img src="/public/Model-3.avif" alt="Model 3" class="h-full w-full object-cover object-center">
+			</div>
+			</ChargeHero>
+		</div>
+		<div class="snap-center">
+			<ModelY
+			title="Model Y"
+			subtitle="Agenda una demostracion de manejo"
+			color="black"
+			>
+			<div 
+			slot="footer"
+			class="gap-x-4 flex mx-auto">
+                <a class="bg-gray-600 rounded font-medium text-white px-8 py-2 inline-block hover:bg-black hover:text-white transition-colors" href="#">Explorar el inventario</a>
+                <a class=" bg-white rounded font-medium  text-black px-8 py-2 hover:bg-black hover:text-white flex justify-center items-center transition-colors" href="#">Orden personalizada</a>
+            </div>
+			<div 
+			slot="background"
+			class="absolute top-0 bottom-0 h-full w-full z-10">
+				<img src="/public/Mode-Y.avif" alt="Model 3" class="h-full w-full object-cover object-center">
+			</div>
+			</ModelY>
+		</div>
+		<div class="snap-center">
+			<ModelS
+			title="Model S"
+			subtitle="Agenda una demostracion de manejo"
+			color="black"
+			>
+			<div 
+			slot="footer"
+			class="gap-x-4 flex mx-auto">
+                <a class="bg-gray-600 rounded font-medium text-white px-8 py-2 inline-block hover:bg-black hover:text-white transition-colors" href="#">Explorar el inventario</a>
+                <a class=" bg-white rounded font-medium  text-black px-8 py-2 hover:bg-black hover:text-white flex justify-center items-center transition-colors" href="#">Orden personalizada</a>
+            </div>
+			<div 
+			slot="background"
+			class="absolute top-0 bottom-0 h-full w-full z-10">
+				<img src="/public/Model-S.avif" alt="Model 3" class="h-full w-full object-cover object-center">
+			</div>
+			</ModelY>
+			</ModelS>
 		</div>
 	</main>
 </Layout>

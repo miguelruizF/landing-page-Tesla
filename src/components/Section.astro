@@ -17,9 +17,13 @@ data-header-color={color}
         </header>
         <footer class={`z-30 relative flex flex-grow justify-end flex-col pb-24`}>
             <slot name="footer" />
+            <!-- <div>
+                <a class="border-[3px] border-white bg-white/5 backdrop-blur-sm rounded font-medium text-white px-8 py-2 inline-block hover:bg-white hover:text-black transition-colors" href="#">Prueba de conduccion</a>
+            </div> -->
         </footer>
     </div>
     <div class="absolute top-0 bottom-0 h-full w-full z-10">
         <slot name="background" />
+        <!-- <video class="object-cover object-center h-full w-full" autoplay muted loop src="/public/video1.webm"></video> -->
     </div>
 </section>
