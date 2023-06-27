@@ -1,12 +1,15 @@
 ---
 import LandingHeader from '../components/LandingHeader.astro';
-import HeroSection from '../components/HeroSection.astro';
+// import HeroSection from '../components/HeroSection.astro';
 // import Logo from '../components/Logo.astro';
 import Layout from '../layouts/Layout.astro';
 import ChargeHero from '../components/ChargeHero.astro';
 import Section from '../components/Section.astro';
 import ModelY from '../components/ModelY.astro';
 import ModelS from '../components/ModelS.astro';
+import ModelX from '../components/ModelX.astro';
+import Energy from '../components/Energy.astro';
+import Accesorios from '../components/Accesorios.astro';
 ---
 
 <Layout title="Autos Electricos | Tesla">
@@ -58,7 +61,7 @@ import ModelS from '../components/ModelS.astro';
 			<div 
 			slot="background"
 			class="absolute top-0 bottom-0 h-full w-full z-10">
-				<img src="/public/Mode-Y.avif" alt="Model 3" class="h-full w-full object-cover object-center">
+				<img src="/public/Mode-Y.avif" alt="Model Y" class="h-full w-full object-cover object-center">
 			</div>
 			</ModelY>
 		</div>
@@ -77,10 +80,60 @@ import ModelS from '../components/ModelS.astro';
 			<div 
 			slot="background"
 			class="absolute top-0 bottom-0 h-full w-full z-10">
-				<img src="/public/Model-S.avif" alt="Model 3" class="h-full w-full object-cover object-center">
+				<img src="/public/Model-S.avif" alt="Model S" class="h-full w-full object-cover object-center">
 			</div>
-			</ModelY>
 			</ModelS>
+		</div>
+		<div class="snap-center">
+			<ModelX
+			title="Model X"
+			subtitle="Agenda una demostracion de manejo"
+			color="black">
+			<div 
+			slot="footer"
+			class="gap-x-4 flex mx-auto">
+                <a class="bg-gray-600 rounded font-medium text-white px-8 py-2 inline-block hover:bg-black hover:text-white transition-colors" href="#">Explorar el inventario</a>
+                <a class=" bg-white rounded font-medium  text-black px-8 py-2 hover:bg-black hover:text-white flex justify-center items-center transition-colors" href="#">Orden personalizada</a>
+            </div>
+			<div 
+			slot="background"
+			class="absolute top-0 bottom-0 h-full w-full z-10">
+				<img src="/public/Model-X.avif" alt="Model X" class="h-full w-full object-cover object-center">
+			</div>
+			</ModelX>
+		</div>
+		<div class="snap-center">
+			<Energy
+			title="Energia solar y Powerwall"
+			subtitle="Totalmente electrico"
+			color="black">
+			<div 
+			slot="footer"
+			class="gap-x-4 flex mx-auto">
+                <a class="bg-gray-900 rounded font-medium text-white px-16 py-2 inline-block hover:bg-white hover:text-black transition-colors" href="#">Más Información</a>
+            </div>
+			<div 
+			slot="background"
+			class="absolute top-0 bottom-0 h-full w-full z-10">
+				<img src="/public/Energy.avif" alt="Energy" class="h-full w-full object-cover object-center">
+			</div>
+			</Energy>
+		</div>
+		<div class="snap-center">
+			<Accesorios
+			title="Accesorios"
+			color="black">
+			<div 
+			slot="footer"
+			class="gap-x-4 flex mx-auto">
+                <a class="bg-gray-900 rounded font-medium text-white px-16 py-2 inline-block hover:bg-white hover:text-black transition-colors" href="#">Compra ahora</a>
+            </div>
+				<div 
+				slot="background"
+				class="absolute top-0 bottom-0 h-full w-full z-10">
+					<img src="/public/Accesories.avif" alt="Accesorios" class="h-full w-full object-cover object-center">
+				</div>
+			</Accesorios>
 		</div>
 	</main>
 </Layout>

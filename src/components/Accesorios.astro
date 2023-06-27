@@ -1,0 +1,37 @@
+---
+const {color, title, subtitle} = Astro.props;
+const textColor = `text-${color}`
+---
+
+<section class="landing-section bg-black h-screen w-screen text-center relative overflow-hidden"
+data-header-color={color}
+>
+    <div class="z-30 relative h-full flex flex-col">
+        <header>
+            <h2 class={`${textColor} pt-40 text-[38px] font-medium`}>
+                {title}
+            </h2>
+            <p class={`${textColor} text-base`}>
+                {subtitle}
+            </p>
+        </header>
+        <footer class={`z-30 relative flex flex-grow justify-end flex-col pb-24`}>
+            <slot name="footer" />
+        </footer>
+        <div class="">
+            <nav class="">
+                <ul class="flex text-sm [&>li>a]:text-current [&>li>a]:inline-block [&>li>a]:py-2 [&>li>a]:px-4 [&>li>a]:font-medium [&>li>a]:transition-colors [&>li>a]:duration-500">
+                    <li><a href="#">Tesla © 2023</a></li>
+                    <li><a href="#">Privacidad y legal</a></li>
+                    <li><a href="#">Llamadas a revisión de vehículos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Noticias</a></li>
+                    <li><a href="#">Ubicaciones</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="absolute top-0 bottom-0 h-full w-full z-10">
+        <slot name="background" />
+    </div>
+</section>
